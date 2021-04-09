@@ -1,5 +1,7 @@
+/* Import font bebas Neue dari GoogleFont */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+/* Deklarasi variabel utama yang digunakan agar menjadi seragam, seperti tema */
 :root {
 	--font-primary: 18px/24px 'Bebas Neue', cursive;
 	--color-bg: #F1F8E2;
@@ -10,12 +12,13 @@
 
 }
 
+/* Style font body dan warna background body menggunakan variabel utama */
 body {
 	font: var(--font-primary);
 	background-color: var(--color-bg);
-
 }
 
+/* Style h1 => label judul */
 h1 {
 	font-size: 5rem;
 	margin: 50px 0;
@@ -24,6 +27,7 @@ h1 {
 	text-shadow: 1px 2px 2px var(--color-font-1);
 }
 
+/* Style pembungkus navigasi lightbox */
 .container {
 	display: flex;
 	width: 50%;
@@ -35,6 +39,7 @@ h1 {
 				0 2px 1px 1px rgba(0, 0, 0, .3);
 }
 
+/* Style bagian navigasi lightbox - Luar */
 .gallery {
 	display: flex;
 	flex-flow: column wrap;
@@ -43,7 +48,6 @@ h1 {
 	width: 80%;
 	margin: auto;
 }
-
 .gallery > li {
 	position: relative;
 	max-width: 120px;
@@ -55,20 +59,22 @@ h1 {
 				0 2px 1px 1px rgba(0, 0, 0, .3);
 }
 
-
+/**
+ * Style bagian navigasi lightbox - Luar
+ * meliputi elemen a (hyperlink), img (gambar), span (text caption) 
+ * dan perilaku hover
+ */
 .gallery > li a {
 	display: flex;
 	text-decoration: none;
 	color: var(--color-font-1);
 	font-size: .85rem;
 }
-
 .gallery > li img {
 	max-width: 120px;
 	max-height: 120px;
 	transition: filter .1s;
 }
-
 .gallery > li span {
 	display: flex;
 	justify-content: center;
@@ -83,17 +89,18 @@ h1 {
 	opacity: 0;
 	transition: .3s;
 }
-
 .gallery > li a:hover span {
 	opacity: .8;
 	mix-blend-mode: normal;
 	transform: scale(1);
 }
-
 .gallery > li a:hover img {
 	filter: brightness(125%);
 }
 
+
+
+/* Bagian Responsif */
 @media screen and (min-width: 699px) {
 	.gallery {
 		flex-flow: row wrap;
