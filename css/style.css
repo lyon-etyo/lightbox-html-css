@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+::root {
+	--font-primary: 18px/24px 'Bebas Neue', cursive;
+}
